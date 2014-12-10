@@ -4,7 +4,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity$PlaceholderFragment">
+    tools:context=".MainActivity$PlaceholderFragment"
+    android:theme="@style/Base.V21.Theme.AppCompat"
+    android:minWidth="16dp"
+    style="@style/Base.TextAppearance.AppCompat"
+    android:background="@color/background_floating_material_dark"
+    android:gravity="center|top">
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,7 +17,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/remainAmountView"
-        android:layout_marginTop="111dp"
+        android:layout_marginTop="54dp"
         android:textSize="48dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -22,22 +27,31 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/usageAmount"
         android:background="@android:color/background_light"
-        android:textSize="32dp"
+        android:textSize="48sp"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/remainAmountView"
         android:layout_alignStart="@+id/remainAmountView"
         android:layout_alignRight="@+id/remainAmountView"
-        android:layout_alignEnd="@+id/remainAmountView" />
+        android:layout_alignEnd="@+id/remainAmountView"
+        style="@style/Base.TextAppearance.AppCompat"
+        android:editable="false"
+        android:textColor="#ff000000"
+        android:minWidth="48dp"
+        android:layout_margin="2dp"
+        android:singleLine="true"
+        android:width="96dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subtract"
-        android:id="@+id/button"
-        android:layout_marginTop="84dp"
+        android:id="@+id/subtractButton"
+        android:layout_marginTop="53dp"
         style="@style/Base.TextAppearance.AppCompat.Button"
-        android:layout_alignTop="@+id/editText"
+        android:onClick="subtractUsage"
+        android:textSize="24dp"
+        android:layout_below="@+id/usageAmount"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
