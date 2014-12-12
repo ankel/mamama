@@ -9,44 +9,56 @@
     android:minWidth="16dp"
     style="@style/Base.TextAppearance.AppCompat"
     android:background="@color/background_floating_material_dark"
-    android:gravity="center|top">
+    android:gravity="center|top"
+    android:id="@+id/main_fragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/remainAmountView"
-        android:layout_marginTop="54dp"
-        android:textSize="48sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffffffff" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/usageAmount"
-        android:background="@android:color/background_light"
-        android:textSize="48sp"
-        style="@style/Base.TextAppearance.AppCompat"
-        android:editable="false"
-        android:textColor="#ff000000"
-        android:singleLine="true"
-        android:width="96dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtract"
+            android:id="@+id/subtractButton"
+            android:layout_marginTop="53dp"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:textSize="24sp"
+            android:layout_below="@+id/usageAmount"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffffff"
+            android:layout_gravity="center|bottom"
+            android:gravity="center|center_vertical|center_horizontal" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Subtract"
-        android:id="@+id/subtractButton"
-        android:layout_marginTop="53dp"
-        style="@style/Base.TextAppearance.AppCompat.Button"
-        android:textSize="24sp"
-        android:layout_below="@+id/usageAmount"
-        android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/remainAmountView"
+            android:textSize="48sp"
+            android:textColor="#ffffffff"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center|top"
+            android:gravity="center_horizontal|bottom" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/usageAmount"
+            android:background="@android:color/background_light"
+            android:textSize="48sp"
+            style="@style/Base.TextAppearance.AppCompat"
+            android:editable="false"
+            android:textColor="#ff000000"
+            android:singleLine="true"
+            android:width="96dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </FrameLayout>
 </RelativeLayout>
