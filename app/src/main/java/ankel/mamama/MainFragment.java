@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -58,6 +59,8 @@ public class MainFragment extends Fragment {
         this.viewRemaining = (TextView) this.rootView.findViewById(R.id.remainAmountView);
         this.usageAmount = (EditText) this.rootView.findViewById(R.id.usageAmount);
         updatePersistentData();
+
+        this.usageAmount.setText("");
     }
 
     private void updatePersistentData() {
@@ -80,4 +83,5 @@ public class MainFragment extends Fragment {
     private long getCurrentDay() {
         return System.currentTimeMillis() / MILIS_IN_DAY;
     }
+
 }
